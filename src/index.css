@@ -1,0 +1,457 @@
+/* Reset geral */
+
+/* Estilização geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Navbar fixo no topo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Container do conteúdo */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nome do site */
+.logo {
+  font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins */
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+/* Ícones */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  color: #ffcc00;
+}
+
+.fa-icon {
+  font-size: 28px;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .fa-icon {
+    font-size: 24px;
+  }
+}
+
+
+
+/* Estilos gerais do Dashboard */
+.dashboard {
+  padding: 3rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6b73ff, #00b7ff); /* Gradiente bonito */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título do Dashboard */
+.dashboard h1 {
+  font-size: 2.75rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Grid de Cards (ajustado para centralizar e alinhar) */
+.dashboard .grid {
+  display: flex;
+  flex-direction: column; /* Cards ficam em uma coluna */
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 600px; /* Limita a largura dos cards */
+  width: 100%;
+  justify-items: center; /* Garante que os cards sejam centralizados */
+  align-items: center; /* Alinha verticalmente os cards */
+  justify-content: center; /* Garante que os cards fiquem centralizados */
+}
+
+/* Estilo dos Cards */
+.dashboard .card-documento, 
+.dashboard .card-imagem {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px; /* Limita a largura máxima de cada card */
+  justify-content: center; /* Garante que os itens dentro do card sejam centralizados */
+}
+
+/* Hover nos Cards */
+.dashboard .card-documento:hover, 
+.dashboard .card-imagem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícone dos Cards */
+.dashboard .card-documento .icon, 
+.dashboard .card-imagem .icon {
+  width: 3rem;
+  height: 3rem;
+  color: #ffffff;
+  background: linear-gradient(145deg, #ff8a00, #e52e71);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto do Card */
+.dashboard .card-documento span, 
+.dashboard .card-imagem span {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+/* Estilo do texto do card ao passar o mouse */
+.dashboard .card-documento:hover span,
+.dashboard .card-imagem:hover span {
+  color: #ff8a00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .dashboard h1 {
+    font-size: 2.25rem;
+  }
+
+  .dashboard .grid {
+    padding: 0 1rem;
+  }
+}
+
+/* Estilos gerais */
+.conversor-container {
+  padding: 3rem;
+  max-width: 500px; /* Diminui o tamanho máximo */
+  margin: 2rem auto; /* Centraliza o container */
+  margin-top: 10rem;
+  background: #ffffff; /* Cor de fundo branco */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo {
+  font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem; /* Maior espaçamento abaixo */
+  color: #333333; /* Cor de texto mais escura */
+}
+
+.input-file, .select-format {
+  display: block;
+  margin: 0.8rem 0 1.5rem 0;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-size: 1.1rem;
+}
+
+.select-format {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-evenly; /* Espaçamento uniforme entre os botões */
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-converter, .btn-voltar {
+  padding: 1rem 2rem; /* Botões mais largos */
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-converter {
+  background-color: #4CAF50; /* Verde */
+}
+
+.btn-converter:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+.btn-voltar {
+  background-color: #f44336; /* Vermelho */
+}
+
+.btn-voltar:hover {
+  background-color: #e53935;
+  transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .conversor-container {
+    padding: 2rem;
+  }
+  .titulo {
+    font-size: 2rem;
+  }
+  .input-file, .select-format {
+    font-size: 1rem;
+  }
+  .btn-converter, .btn-voltar {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Container principal */
+.converter-container {
+  padding: 3rem;
+  max-width: 500px; /* Diminui o tamanho máximo */
+  margin: 2rem auto; /* Centraliza o container */
+  margin-top: 10rem;
+  background: #ffffff; /* Cor de fundo branco */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Título */
+.titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.busca-arquivo {
+  display: block;
+  margin: 0.8rem 0 1.5rem 0;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-size: 1.1rem;
+}
+
+
+.seleciona-arquivo {
+
+  display: block;
+  margin: 0.8rem 0 1.5rem 0;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-size: 1.1rem; 
+  
+}
+
+.conteiner-botoes {
+  display: flex;
+  justify-content: space-evenly; /* Espaçamento uniforme entre os botões */
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-converter, .btn-voltar {
+  padding: 1rem 2rem; /* Botões mais largos */
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-converter:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+
+.btn-voltar:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .converter-container {
+    padding: 15px;
+  }
+  .titulo {
+    font-size: 1.8rem;
+  }
+  .input-file,
+  .select-format {
+    font-size: 1rem;
+  }
+  .btn-converter,
+  .btn-voltar {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+
+/* Login Container */
+.login-container {
+  padding: 3rem;
+  max-width: 500px; /* Diminui o tamanho máximo */
+  margin: 2rem auto; /* Centraliza o container */
+  margin-top: 10rem;
+  background: #ffffff; /* Cor de fundo branco */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login Title */
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input Fields */
+.login-input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Button */
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+
+.rodape {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.pager-inner-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+.logo-footer .logo1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #00d9ff;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+  margin: 10px auto;
+  width: 80%;
+}
+
+.copyright {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+
