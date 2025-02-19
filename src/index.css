@@ -3,7 +3,11 @@
 /* Estilização geral */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar fixo no topo */
@@ -418,12 +422,28 @@ button:hover {
   background-color: #0056b3;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .rodape {
   background-color: #000;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 15px;
+  width: 100%;
+  position: relative; /* Remove position fixed */
   font-family: Arial, sans-serif;
 }
 
